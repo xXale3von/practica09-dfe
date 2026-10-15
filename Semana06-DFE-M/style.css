@@ -1,0 +1,25 @@
+.menu a:not(.activo) {
+opacity: .7;
+}
+
+.menu a:is(.visitados,.otros) {
+    color:blue ;
+}
+
+p::first-letter {
+font-size: 2rem;
+font-weight: bold;
+}
+.boton::after {
+content: "📱 ";
+}
+
+p { color: rgb(77, 133, 85); }
+.texto { color: blue; }
+#principal {
+color: rgb(0, 0, 0);
+}
+
+input::placeholder {
+    font-size: 1rem;
+}

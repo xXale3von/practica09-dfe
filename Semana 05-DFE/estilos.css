@@ -1,0 +1,38 @@
+body{
+    background:white ;
+}
+@media (min-width: 768px)
+{
+    body{
+        background:white;
+    }
+}
+@media (min-width: 1000px)
+{
+    body{
+        background: white;
+    }
+}
+.contenedor
+{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 300px;
+    height: 300px;
+    border: 2px solid;
+    justify-content: end;
+    align-items: flex-end;
+
+}
+.contenedor article{
+    border: 2px black solid;
+    padding: 10px;
+    height: 20px;
+    width: 40px;
+}
+
+.nav{
+    color: green;
+}
+

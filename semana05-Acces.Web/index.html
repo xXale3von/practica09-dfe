@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario accesible de registro">
+    <title>Registro Accesible</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main class="contenedor">
+        <header>
+            <h1>Formularios de registros</h1>
+            <p><strong>📑​</strong> Campos obligatorios</p>
+        </header>
+        <form id="registroForm" novalidate>
+            
+            <fieldset>
+                <legend>Datos personales</legend>
+                <div class="campo">
+                    <label for="nombre">Nombre completo </label>
+                    <input type="text" id="nombre" name="nombre" autocomplete="name"
+                    required aria-required="true" aria-describedby="errorNombre">
+                    <span id="errorNombre" class="error" role="alert"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" name="apellidos"
+                        autocomplete="family-name" required aria-required="true"
+                        aria-describedby="errorApellidos">
+                    <span id="errorApellidos" class="error" role="alert"></span>
+                </div>
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" autocomplete="email"
+                        placeholder="@correo.com" required aria-required="true" aria-describedby="errorCorreo">
+                    <span id="errorCorreo" class="error" role="alert"></span>
+                </div>
+                <div class="campo">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono"name="telefono"
+                        autocomplete="tel" placeholder="">
+                </div>
+                <div class="campo">
+                    <label for="fecha">Fecha de nacimiento</label>
+                    <input type="date" id="fecha"
+                        name="fecha" autocomplete="bday">
+                </div>
+                <div class="campo">
+                    <label for="pais">Selecciona un país:</label>
+                        <select id="pais" name="pais">
+                        <option value="">-- Elige un país --</option>
+                        <option value="PE">Perú</option>
+                        <option value="CL">Chile</option>
+                        <option value="CO">Colombia</option>
+                        <option value="AR">Argentina</option>
+                        <option value="MX">México</option>
+                        <option value="ES">España</option>
+                        <option value="CH">China</option>
+                        </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Seguridad de la cuenta</legend>
+                <div class="campo">
+                    <label for="password">Contraseña </label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        minlength="8"
+                        autocomplete="new-password"
+                        required
+                        aria-required="true"
+                        aria-describedby="ayudaPassword errorPassword">
+
+                    <small id="ayudaPassword">
+                        La contraseña debe tener como mínimo 8 caracteres.
+                    </small>
+                    <span id="errorPassword" class="error" role="alert"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="confirmPassword">
+                        Confirmación de contraseña 
+                    </label>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        autocomplete="new-password"
+                        required
+                        aria-required="true"
+                        aria-describedby="errorConfirmPassword">
+                    <span
+                        id="errorConfirmPassword"
+                        class="error"
+                        role="alert">
+                    </span>
+                </div>
+            </fieldset>
+            <div class="acciones">
+                <button type="submit">
+                    Registrarse
+                </button>
+                <button type="reset" class="secundario">
+                    Limpiar formulario
+                </button>
+            </div>
+            <div
+                id="mensajeExito"
+                class="exito"
+                role="status"
+                aria-live="polite">
+            </div>
+        </form>
+    </main>
+    <script src="style.js"></script>
+</body>
+</html>

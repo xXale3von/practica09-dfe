@@ -1,0 +1,22 @@
+.padre {
+    font-size: 10vw;
+}
+
+.hijo {
+    font-size: 0.5em;
+    color :aqua;
+}
+
+.nieto {
+    font-size: 0.5em;
+    color :red;
+}
+
+.contenedor {
+    width: 200px;
+    height: 200px;
+    border: 10px solid green;
+}
+.contenedor2 {
+    width: calc(75% - 0.5em);
+}

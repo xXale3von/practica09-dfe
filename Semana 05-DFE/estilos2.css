@@ -1,0 +1,15 @@
+.lista li:first-child {
+    font-weight: bold;
+    color: green;
+}
+
+
+.lista li:nth-child(2) {
+    color: blue;
+    border: 2px solid yellow;
+}
+
+
+.lista li:last-child {
+    color: red;
+}
